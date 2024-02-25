@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e0e8ff;
+  min-height: 100vh;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #7280a7;
+}
+
+.img-desktop {
+  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+.img-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .img-mobile {
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+  .img-desktop {
+    display: none;
+  }
+}
+main {
+  display: flex;
+  z-index: 1;
+  flex-flow: wrap column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+  background: #FFFFFF;
+  width: 450px;
+}
+main img {
+  border-radius: 20px 20px 0 0;
+}
+main article {
+  padding: 40px;
+}
+main article h1 {
+  color: #1f2f56;
+  font-size: 30px;
+  margin: 0;
+}
+main article p {
+  padding: 10px;
+  line-height: 25px;
+}
+main section {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  align-items: center;
+  background: #f5f7ff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+main section .plan {
+  display: flex;
+  flex-flow: wrap row;
+  align-items: center;
+}
+main section img {
+  height: 50px;
+  margin-right: 20px;
+}
+main section div {
+  text-align: left;
+}
+main section div h2 {
+  font-size: 18px;
+  color: #1f2f56;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+main section div p {
+  margin: 0;
+  padding: 0;
+}
+main section a {
+  color: #3829e0;
+  font-size: 15px;
+  font-weight: 700;
+}
+main section a:hover {
+  text-decoration: none;
+  color: #766CF1;
+}
+main .btn {
+  padding: 20px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  line-height: 10px;
+  font-weight: 700;
+}
+main .btn-blue {
+  background: #3829e0;
+  color: #e0e8ff;
+}
+main .btn-blue:hover {
+  background: #766CF1;
+}
+main .btn-white {
+  background: none;
+  color: #7280a7;
+}
+main .btn-white:hover {
+  color: #1f2f56;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,145 @@
+*{
+  box-sizing: border-box;
+}
+
+$pale-blue:	#e0e8ff;
+$bright-blue: #3829e0;
+$very-pale-blue: #f5f7ff;
+$desaturated-blue: #7280a7;
+$violet: #766CF1;
+$white: #FFFFFF;
+$dark-blue:	#1f2f56;
+$font-weight-500: 500;
+$font-weight-700: 700;
+$font-weight-900: 900;
+$font-red-hat: 'Red Hat Display', sans-serif;
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $pale-blue;
+  min-height: 100vh;
+  font-family: $font-red-hat;
+  font-weight: $font-weight-500;
+  font-size: 16px;
+  color: $desaturated-blue;
+}
+.img-desktop{
+  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+.img-mobile {
+  display: none;
+}
+@media screen and (max-width: 600px){
+  .img-mobile{
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+  .img-desktop {
+    display: none;
+  }
+}
+main {
+  display: flex;
+  z-index: 1;
+  flex-flow: wrap column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+  background: $white;
+  width: 450px;
+  img {
+    border-radius: 20px 20px 0 0;
+  }
+  article {
+    padding: 40px;
+    h1{
+      color: $dark-blue;
+      font-size: 30px;
+      margin:0;
+    }
+    p {
+      padding: 10px;
+      line-height: 25px;
+    }
+  }
+  section {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    align-items: center;
+    background: $very-pale-blue;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 40px;
+    .plan{
+      display: flex;
+      flex-flow: wrap row;
+      align-items: center;
+
+    }
+    img {
+      height: 50px;
+      margin-right: 20px;
+    }
+    div {
+      text-align: left;
+      h2 {
+        font-size: 18px;
+        color: $dark-blue;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+    a{
+      color: $bright-blue;
+      font-size: 15px;
+      font-weight: $font-weight-700;
+      &:hover{
+        text-decoration: none;
+        color: $violet;
+      }
+    }
+  }
+  .btn {
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    line-height: 10px;
+    font-weight: $font-weight-700;
+  }
+  .btn-blue {
+    background: $bright-blue;
+    color: $pale-blue;
+
+    &:hover {
+      background: $violet;
+    }
+   }
+  .btn-white {
+    background: none;
+    color: $desaturated-blue;
+    &:hover {
+      color: $dark-blue;
+      cursor: pointer;
+    }
+  }
+}
